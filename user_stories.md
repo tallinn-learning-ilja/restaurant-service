@@ -1,6 +1,7 @@
 # User stories for restaurant application
  
 ## Customer user stories
+- As a customer, I would like to register, to be able to make all actions
 - As a customer, I would like to see all available tables at the restaurant for the given date, to make a reservation
 - As a customer, I would like to make a reservation for a given date
 - As a customer, I would like to cancel a reservation
