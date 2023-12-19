@@ -1,6 +1,7 @@
 spring:
-  autoconfigure:
-    exclude:
-      - org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration
-      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
-      - org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration
+  datasource:
+    url: jdbc:postgresql://localhost:5432/restaurant_db
+    username: restaurant_user
+    password: restaurant_pw
+  flyway:
+    locations: classpath:/db/tables, classpath:/db/data
