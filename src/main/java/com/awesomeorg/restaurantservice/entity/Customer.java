@@ -1,5 +1,6 @@
 package com.awesomeorg.restaurantservice.entity;
 
+import com.awesomeorg.restaurantservice.protocol.CreateCustomerRequest;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -21,5 +22,11 @@ public class Customer {
     private String phoneNumber;
 
     private String emailAddress;
+
+    public Customer(final CreateCustomerRequest request) {
+        this.fullName = request.getFullName();
+        this.emailAddress = request.getEmailAddress();
+        this.phoneNumber = request.getPhoneNumber();
+    }
 
 }
