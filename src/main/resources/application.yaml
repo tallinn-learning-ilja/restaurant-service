@@ -5,3 +5,6 @@ spring:
     password: restaurant_pw
   flyway:
     locations: classpath:/db/tables, classpath:/db/data
+server:
+  error:
+    include-message: always

@@ -16,5 +16,5 @@ public class Table {
 
     private String name;
 
-    private Integer maxNumberOfGuests;
+    private Integer numberOfMaxGuests;
 }
