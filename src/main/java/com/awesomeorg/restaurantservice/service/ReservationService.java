@@ -40,7 +40,7 @@ public class ReservationService {
         }
 
         final Table table = optionalTable.get();
-        if (table.getMaxNumberOfGuests() < request.getNumberOfGuests()) {
+        if (table.getNumberOfMaxGuests() < request.getNumberOfGuests()) {
             throw new BadRequestException("Table can't fit so many guests");
         }
 
