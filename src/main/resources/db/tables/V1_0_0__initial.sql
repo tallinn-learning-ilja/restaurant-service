@@ -11,7 +11,7 @@ CREATE TABLE customers
     full_name     VARCHAR(255)  NOT NULL,
     phone_number  VARCHAR(30)   NOT NULL,
     email_address VARCHAR(2555) NOT NULL
-)
+);
 
 CREATE table blocklisted_customers
 (

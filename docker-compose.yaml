@@ -1,0 +1,19 @@
+services:
+  postgres:
+    container_name: restaurant_db
+    image: 'postgres:latest'
+    environment:
+      POSTGRES_DB: restaurant_db
+      POSTGRES_USER: restaurant_user
+      POSTGRES_PASSWORD: restaurant_pw
+    ports:
+      - 5432:5432
+  app:
+    container_name: restaurant_app
+    image: restaurant_app:latest
+    ports:
+      - 8080:8080
+    depends_on:
+    - postgres
+    environment:
+    - spring.datasource.url=jdbc:postgresql://postgres:5432/restaurant_db
